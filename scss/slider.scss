@@ -1,0 +1,358 @@
+@charset "UTF-8";
+/* !СЛАЙДЕР 1 */
+.stars-slider1 .slick-list {
+}
+
+/* Лента слайдов */
+.stars-slider1 .slick-track {
+  display: flex;
+}
+
+/* Слайд */
+.stars-slider1 .slick-slide {
+  margin-right: 33px;
+}
+
+/* Стрелка */
+.stars-slider1 .slick-arrow {
+  position: absolute;
+  z-index: 10;
+  width: 40px;
+  height: 20px;
+  top: -130px;
+  font-size: 0;
+  background-size: cover;
+  border: none;
+  background-color: #FFFFFF;
+  background-image: url("../img/icons/left-arrow.png");
+  filter: grayscale(100%);
+  opacity: 0.1;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.stars-slider1 .slick-arrow:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+.stars-slider1 .slick-arrow:focus {
+  outline: none;
+}
+
+/* Стрелка влево */
+.stars-slider1 .slick-arrow.slick-prev {
+  left: 1434px;
+}
+
+/* Стрелка вправо */
+.stars-slider1 .slick-arrow.slick-next {
+  left: 1500px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+}
+
+/* Точки (булиты) */
+.stars-slider1 .slick-dots{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 72px;
+  width: 1600px;
+}
+.stars-slider1 .slick-dots li{
+  margin-right: 11px;
+  list-style: none;
+}
+.stars-slider1 .slick-dots button{
+  font-size: 0;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #6722d6;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  transition: background-color 0.5s;
+}
+.stars-slider1 .slick-dots button:hover{
+  background-color: #6722d6;
+}
+.stars-slider1 .slick-dots button:focus{
+  outline: none;
+}
+/* Активная точка */
+.stars-slider1 .slick-dots li.slick-active button{
+  background-color: #6722d6;
+  
+}
+
+/* Элемент точки */
+
+/* !СЛАЙДЕР 2 */
+.spikers-slider1 .slick-list {
+  // overflow: hidden;
+  // margin-left: -15px;
+}
+
+/* Лента слайдов */
+.spikers-slider1 .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Слайд */
+.spikers-slider1 .slick-slide {
+  margin-right: 33px;
+  // padding-left: 15px;
+}
+
+/* Стрелка */
+.spikers-slider1 .slick-arrow {
+  position: absolute;
+  z-index: 10;
+  width: 40px;
+  height: 20px;
+  top: -130px;
+  font-size: 0;
+  background-size: cover;
+  border: none;
+  background-color: #FFFFFF;
+  background-image: url("../img/icons/left-arrow.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+  opacity: 0.1;
+}
+.spikers-slider1 .slick-arrow:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.spikers-slider1 .slick-arrow:focus {
+  outline: none;
+}
+
+/* Стрелка влево */
+.spikers-slider1 .slick-arrow.slick-prev {
+  left: 1434px;
+}
+
+/* Стрелка вправо */
+.spikers-slider1 .slick-arrow.slick-next {
+  left: 1500px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+}
+
+/* Точки (булиты) */
+.spikers-slider1 .slick-dots{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 72px;
+  width: 1600px;
+}
+.spikers-slider1 .slick-dots li{
+  margin-right: 11px;
+  list-style: none;
+}
+.spikers-slider1 .slick-dots button{
+  font-size: 0;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #6722d6;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  transition: background-color 0.5s;
+}
+.spikers-slider1 .slick-dots button:hover{
+  background-color: #6722d6;
+}
+.spikers-slider1 .slick-dots button:focus{
+  outline: none;
+}
+/* Активная точка */
+.spikers-slider1 .slick-dots li.slick-active button{
+  background-color: #6722d6;
+}
+
+/*! СЛАЙДЕР победители....... */ 
+/* Лента слайдов */
+.levels-slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.levels-slider .slick-list {
+  overflow: hidden;
+}
+
+/*! СЛАЙДЕР 3............... */ 
+
+.medias-slider .slick-slide.slick-current{
+  transition: all 0.6s ease;
+  transform: scale(1.25);
+  opacity: 1;
+}
+
+/* Лента слайдов */
+.medias-slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 0;
+}
+
+/* Слайд */
+.medias-slider .slick-slide {
+  transition: all 0.6s ease;
+  margin-left: 105px;
+  margin-right: 105px;
+  padding: 0;
+  opacity: 0.72;
+}
+
+/* Стрелка */
+.medias-slider .slick-arrow {
+  display: block;
+  position: absolute;
+  top: 617px;
+  z-index: 9;
+  width: 87px;
+  height: 87px;
+  box-shadow: 0 16px 43px rgba(91, 13, 203, 0.14);
+  border: 1px solid #ededed;
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-size: 0;
+}
+.medias-slider .slick-arrow::after {
+  content: " ";
+  position: absolute;
+  z-index: 10;
+  width: 36px;
+  height: 17px;
+  top:calc(50% - 8px);
+  left: calc(50% - 18px);
+  background-size: cover;
+  border: none;
+  background-color: #FFFFFF;
+  background-image: url("../img/icons/left-arrow.png");
+  filter: grayscale(100%);
+  opacity: 0.1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.medias-slider .slick-arrow:hover:after {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+.medias-slider .slick-arrow:focus {
+  outline: none;
+}
+
+/* Стрелка влево */
+.medias-slider .slick-arrow.slick-prev {
+  left: calc(50% - 657px);
+}
+
+/* Стрелка вправо */
+.medias-slider .slick-arrow.slick-next {
+  right: calc(50% - 657px);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+}
+
+/* !СЛАЙДЕР 4 */
+.partners-slider .slick-list {
+  overflow: hidden;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+/* Лента слайдов */
+.partners-slider .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Слайд */
+.partners-slider .slick-slide {
+  margin-right: 40.5px;
+  margin-bottom: 50px;
+  padding-left: 20px;
+}
+
+/* Стрелка */
+.partners-slider .slick-arrow {
+  position: absolute;
+  z-index: 10;
+  width: 40px;
+  height: 20px;
+  top: -160px;
+  font-size: 0;
+  background-size: cover;
+  border: none;
+  background-color: #FFFFFF;
+  background-image: url("../img/icons/left-arrow.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+  opacity: 0.1;
+}
+.partners-slider .slick-arrow:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.partners-slider .slick-arrow:focus {
+  outline: none;
+}
+
+/* Стрелка влево */
+.partners-slider .slick-arrow.slick-prev {
+  left: 1434px;
+}
+
+/* Стрелка вправо */
+.partners-slider .slick-arrow.slick-next {
+  left: 1500px;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+}
+
+/* Стрелка не активная */
+/* Точки (булиты) */
+.partners-slider .slick-dots{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin-top: 72px;
+  width: 1600px;
+}
+.partners-slider .slick-dots li{
+  margin-right: 11px;
+  list-style: none;
+}
+.partners-slider .slick-dots button{
+  font-size: 0;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #6722d6;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+.partners-slider .slick-dots button:focus{
+  outline: none;
+}
+/* Активная точка */
+.partners-slider .slick-dots li.slick-active button{
+  background-color: #6722d6;
+}

@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Helvetica Neue Cyr - Roman';
+  src: local("Helvetica Neue Cyr"), url("../fonts/helveticaneuecyr-roman-webfont.woff2") format("woff2"), url("../fonts/helveticaneuecyr-roman-webfont.woff") format("woff"), url("../fonts/helveticaneuecyr-roman-webfont.eot"), url("../fonts/helveticaneuecyr-roman-webfont.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Bold';
+  src: local("Bebas Neue Bold"), url("../fonts/bebasneue_bold-webfont.woff2") format("woff2"), url("../fonts/bebasneue_bold-webfont.woff") format("woff"), url("../fonts/bebasneue_bold-webfont.eot"), url("../fonts/bebasneue_bold-webfont.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}

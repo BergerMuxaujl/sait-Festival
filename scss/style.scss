@@ -1,0 +1,1988 @@
+@import 'map.scss';
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-weight: 400;}
+/*--------------------*/
+
+*{
+    font-family: "Helvetica Neue Cyr - Roman";
+}
+.wrapper{
+    width: 100%;
+    overflow: hidden;
+}
+.container{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1750px;
+}
+.inner{
+    padding-left: 105px;
+    padding-right: 105px;
+}
+input{
+    outline: none;
+    border: none;
+}
+
+//! ........ГЛАВНАЯ........
+// .........МЕНЮ...........
+.main {
+    background: url('../img/main.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 950px;
+}
+.header{
+    display: flex;
+    height: 154px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    *{
+        color: #ffffff;
+    }
+}
+
+.logo-header {
+    display: flex;
+    width: auto;
+}
+.logo__img {
+    width: 105px;
+    height: 100px;
+    object-fit: cover;
+}
+.logo__text {
+    display: flex;
+    align-items: center;
+    width: 283px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+    text-align: left;
+    margin-left: 35px;
+}
+.email {
+    display: inline;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.call {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+}
+.phone__link {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+.call-link {
+    display: flex;
+    align-items: center;
+}
+.call-link__circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #5bf35b;
+    margin-right: 8px;
+}
+.call-link__text {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.button-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 34px;
+    width: 37px;
+    cursor: pointer;
+}
+.button-menu__el {
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff; 
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+    transform-origin: 0px 2px;
+}
+.burger-1{
+    transform: scale(1.14) rotate(45deg);
+}
+.burger-2{
+    opacity: 0;
+}
+.burger-3{
+    transform: scale(1.14) rotate(-45deg);
+}
+.mobile-call {
+    display: none;
+}
+// ........Head - шапка скрытая
+.head-wrap{
+    transition: background-color 0.5s ease;
+}
+.head-wrap_open{
+    background-color: #240c46;
+}
+.hide-menu{
+    display: none;
+    justify-content: space-between;
+    width: 880px;
+    opacity: 0;
+    transition: opacity 3400ms;
+}
+.hide-menu_open{
+    display: flex;
+    opacity: 1;
+    animation: showMenu 400ms;
+}
+.toBlock{
+    color: #ffffff;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 24px;
+    &:hover{
+        color: #d7bcf9;
+    }
+}
+.animHide{
+    display: none;
+}
+.animOpacity0{
+    opacity: 0;
+    animation: hideMenu 200ms;
+}
+
+
+// .........Главная - Контент...........
+.main-content {
+    margin-top: 110px;
+    *{
+        color: #ffffff;
+        width: 850px;
+    }
+}
+.main__title {
+    display: inline-block;
+    position: relative;
+    width: auto;
+}
+h1{
+    display: inline-block;
+    font-family: "Bebas Neue Bold";
+    font-size: 93px;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase; 
+    line-height: 108px;
+    .colorh1{
+        color: #e5d2ff;
+        font-family: "Bebas Neue Bold";
+    } 
+}
+.main__data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -62px;
+    top: 0;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 38px;
+    width: 236px;
+    height: 98px;
+    border-radius: 10px;
+    background-image: linear-gradient(47deg, #aa00f13F 0%, #6722d63F 100%);
+}
+.main__subtitle {
+    margin-top: 56px;
+    font-size: 34px;
+    line-height: 50px;
+    font-weight: 400; 
+}
+.send-phone {
+    display: flex;
+    position: relative;
+    margin-top: 74px;
+    width: 805px;
+    height: 91px;
+    border-radius: 45px;
+    border: 1px solid #a686f7;
+    *{
+        background: none;
+    }
+}
+.input-phone {
+    border-radius: 45px;
+    padding-left: 67px;
+    width: 400px;
+    color: #e0d6fa;
+    font-size: 25px;
+    font-family: "Helvetica Neue Cyr - Roman";
+    &::placeholder{
+        color: #e0d6fa;
+        font-size: 25px;
+    }
+}
+.input-send {
+    position: absolute;
+    right: -1px;
+    top: -2px;
+    border-radius: 45px;
+    width: 363px;
+    height: 93px;
+    box-shadow: 0 20px 95px rgba(162, 0, 255, 0.18);
+    background-color: #81589f;
+    background-image: linear-gradient(24deg, #3000ff 0%, #a800ff 100%);
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+.text-agree {
+    width: 476px;
+    height: 40px;
+    color: #d7b3d2;
+    font-size: 18px;
+    margin-top: 37px;
+    margin-left: 63px;
+    span{
+        text-decoration: underline;
+        color:inherit;
+        cursor: pointer;
+    }
+}
+// ........ГЛАВНАЯ-соцсети........
+.soc {
+    position: absolute;
+    top: calc(50% - 97px);
+    right: 0px;
+}
+.soc-el{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 27px;
+}
+.soc__img{
+    width: 29px;
+    height: auto;
+    object-fit: cover;
+    opacity: 0.6;
+    &:hover{
+        opacity: 1;
+    }
+}
+.facebook__img {
+    width: 18px;
+    height: 33px;
+}
+// ........ГЛАВНАЯ-скроллбар........
+.scrollbar {
+    position: absolute;
+    top: calc(50% - 75px);
+}
+.scrollbar-el {
+    position: relative; 
+    display: block;
+    box-sizing: content-box;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1px solid #b3b3b3a2;
+    margin-bottom: 33px;
+    background: transparent;
+    z-index: 5;
+    &:after{
+        position: absolute;
+        left: 22px;
+        top: -5px;
+        color: #a7a7a783;
+        font-size: 20px;
+        font-weight: 300;
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        z-index: 6;
+        background: linear-gradient(47deg, #aa00f1 0%, #6722d6 100%);
+        opacity: 0;
+        transition: opacity 0.7s ease;
+    }
+    &:hover{
+        &:after{
+            display: block;
+        }
+        &::before{
+            opacity: 1;
+        }
+    }
+}
+.scrollbar-el.sb_this{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    box-shadow: 0 21px 57px rgba(162, 0, 255, 0.47);
+    background-image: linear-gradient(47deg, #aa00f1 0%, #6722d6 100%);
+    &:after{
+        display: block;
+    }
+}
+.sb-01__el:after{
+    display: none;
+    content: "01";
+}
+.sb-02__el:after{
+    display: none;
+    content: "02";
+}
+.sb-03__el:after{
+    display: none;
+    content: "03";
+}
+.sb-04__el:after{
+    display: none;
+    content: "04";
+}
+.sb-05__el:after{
+    display: none;
+    content: "05";
+}
+.sb-06__el:after{
+    display: none;
+    content: "06";
+}
+.sb-07__el:after{
+    display: none;
+    content: "07";
+}
+.sb-08__el:after{
+    display: none;
+    content: "08";
+}
+.sb-09__el:after{
+    display: none;
+    content: "09"
+}
+.sb-10__el:after{
+    display: none;
+    content: "10";
+}
+.sb-11__el:after{
+    display: none;
+    content: "11";
+}
+.sb-12__el:after{
+    display: none;
+    content: "12";
+}
+.sb-13__el:after{
+    display: none;
+    content: "13";
+}
+.sb-14__el:after{
+    display: none;
+    content: "14";
+}
+.scrollbar-line{
+    position: absolute;
+    left: 6px;
+    top: -35px;
+    width: 1px;
+    height: 225px;
+    background-color: #e3e3e321;
+    z-index: 3;
+}
+
+//! ........ДЛЯ ЧЕГО МЫ (БЛОК 2)........
+.wfor{
+    overflow: hidden;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    *{
+        color: #310f65;
+    }
+}
+.wfor__circle {
+    position: absolute;
+    z-index: -1;
+    $width: 1450px; 
+    width: $width;
+    height: 1296px;
+    top:-1009px;
+    left: calc(50% - (#{$width} / 2));
+    border: 1px solid #ededed;
+    border-radius: 50%;
+}
+.wfor-title {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: "Bebas Neue Bold";
+    font-size: 72px;
+}
+.wfor-box{
+    margin-top: -100px;
+    display: flex;
+    justify-content: space-between;
+    height: 410px;
+
+}
+.wfor-el {
+    width: 360px;
+    &:nth-child(2){
+        align-self: flex-end;
+    }
+}
+.wfor-boximg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    box-shadow: 0 16px 43px rgba(105, 0, 255, 0.14);
+    border: 1px solid #ededed;
+    background-color: #ffffff;
+    margin-left:auto;
+    margin-right: auto;
+}
+.wfor-el__title {
+    font-size: 32px;
+    line-height: 41px;
+    text-align: center;
+    margin-top: 38px;
+}
+
+
+//! ........ЧТО ПОЛУЧАТ УЧАСТНИКИ (БЛОК 3)........
+.wget{
+    background-color: #240c46;
+    //overflow: hidden;
+    width: 100%;
+}
+.wget-inner{
+    padding-top: 120px;
+    padding-bottom: 125px;
+}
+.wget-title{
+    color: #d7bcf9;
+    font-family: "Bebas Neue Bold";
+    font-size: 72px;
+    text-transform: uppercase;
+}
+.wget-row1{
+    margin-left: -150px;
+    margin-top: 45px;
+    display: flex;
+    width: auto;
+}
+.wget-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wget__img{
+    object-fit: cover;
+}
+.wget-box__title{
+    margin-top: -50px;
+    color: #ffffff;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 32px;
+    line-height: 46px;
+    text-align: center;
+}
+.wget-box1__title{
+    margin-top: -100px;
+}
+.wget-box__title_cor{
+    padding-left: 20px;
+}
+.wget-row2{
+    margin-left: 40px;
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+}
+.box-backsub{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    position: absolute;
+    width: calc(100vw - 50% - 270px);
+    left: calc(50% + 270px);
+    top: 0px;
+    background-color: #ffffff;
+    margin-top: -37px;
+    &::before{
+        content: "Концерты звезд";
+        position: absolute;
+        align-self: flex-end;
+        padding-left: 80px;
+        color: #310f65;
+        font-family: "Helvetica Neue Cyr - Roman";
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 60px;        
+    }
+}
+.backsub{
+    margin-left: -250px;
+    object-fit: cover;
+}
+//! ........СЛАЙДЕР1 (БЛОК 4)........
+.container_stars,
+.container_spikers{
+    margin-left: calc((100% - 1750px) / 2);
+    margin-right: 0;
+    width: auto;
+}
+.stars-inner,
+.spikers-inner {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+.stars-inner_title,
+.spikers-inner_title{
+    padding-bottom: 0px;
+}
+.stars-inner_slider,
+.spikers-inner_slider {
+    padding-right: 0;
+    padding-top: 0;
+}
+.stars-title {
+    color: #310f65;
+    font-family: "Bebas Neue Bold";
+    text-transform: uppercase;
+    font-size: 72px;
+    margin-bottom: 90px;
+}
+.stars-slider1,
+.spikers-slider1 {
+    position: relative;
+    &:before{
+        content: " ";
+        position: absolute;
+        z-index: 2;
+        width: calc(105px + ((100vw - 1750px) / 2) - 16px);
+        height: 520px;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+    &:after{
+        content: " ";
+        position: absolute;
+        z-index: 2;
+        width: calc(105px + ((100vw - 1750px) / 2) - 16px);
+        left: calc((105px + ((100vw - 1750px) / 2)) * (-1));
+        height: 520px;
+        top: 0px;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+}
+.stars-slider1__el{
+    position: relative;
+}
+.stars__img-box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 360px;
+    height: 438px;
+    box-shadow: 0 31px 43px rgba(175, 120, 254, 0.14);
+    border: 1px solid #f8f8f8;
+}
+.stars__img {
+    object-fit: cover;
+    max-width: 95%;
+    max-height: 95%;
+}
+.stars__subtitle {
+    margin-top: 46px;
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 24px;
+    text-align: center;
+}
+
+//! ........СЛАЙДЕР2 (БЛОК)........
+.spikers-title {
+    color: #310f65;
+    font-family: "Bebas Neue Bold";
+    text-transform: uppercase;
+    font-size: 72px;
+    margin-bottom: 90px;
+}
+.spikers__img-box{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 360px;
+    height: 438px;
+    box-shadow: 0 31px 43px rgba(175, 120, 254, 0.14);
+    border: 1px solid #f8f8f8;
+}
+.spikers__img {
+    object-fit: cover;
+    max-width: 95%;
+    max-height: 95%;
+}
+.spikers__subtitle {
+    margin-top: 46px;
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 24px;
+    text-align: center;
+}
+//! ........ИНФОРМАЦИЯ ДЛЯ УЧАСТНИКОВ (БЛОК 5).......
+.infofor{
+    background-color: #240c46;
+}
+.infofor-inner {
+    display: flex;
+    flex-direction: column;
+    padding-top: 111px;
+    padding-bottom: 126px;
+}
+.infofor-title {
+    color: #d7bcf9;
+    font-family: "Bebas Neue Bold";
+    font-size: 72px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 120px;
+}
+.step-row1 {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+.row1-box {
+    display: flex;
+    flex-direction: column;
+    padding-left: 61px;
+    padding-right: 61px;
+    padding-bottom: 65px;
+}
+.step-box1 {
+    width: 40%;
+    position: relative;
+    &:after{
+        content: " ";
+        position: absolute;
+        z-index: 3;
+        bottom: 89%;
+        left: -6px;
+        width: 13px;
+        height: 13px;
+        background-image: linear-gradient(47deg, #aa00f1 0%, #6722d6 100%);
+        border-radius: 50%;
+    }
+    &:before{
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 89%;
+        width: 100%;
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom-left-radius: 20px;
+    }
+}
+.step__img {
+    position: relative;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: left;
+}
+.step1__img {
+    margin-left: -10px;
+}
+.row1-imgbox,
+.row2-imgbox{
+    position: relative;
+    &:after{
+        position: absolute;
+        left: 85px;
+        bottom: 7px;
+        font-size: 20px;
+        color: #d7bcf9;
+    }
+}
+.row1-imgbox1:after{
+    content: "ШАГ 01"
+}
+.row1-imgbox2:after{
+    content: "ШАГ 02"
+}
+.row1-imgbox3:after{
+    content: "ШАГ 03"
+}
+.row2-imgbox1:after{
+    content: "ШАГ 04";
+}
+.row2-imgbox2:after{
+    content: "ШАГ 05";
+}
+.row2-imgbox3:after{
+    content: "ШАГ 06";
+}
+.step__subtitle {
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 29px;
+    color:#ffffff;
+    margin-top: 45px;
+}
+.request-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 346px;
+    height: 89px;
+    border-radius: 45px;
+    background-color: #81589f;
+    background-image: linear-gradient(24deg, #3000ff 0%, #a800ff 100%);
+    color: #ffffff;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 27px;
+    margin-top: 48px;
+    cursor: pointer;
+}
+.step-box2 {
+    justify-content: center;
+    width: 30%;
+    position: relative;
+    &:after{
+        content: " ";
+        position: absolute;
+        z-index: 3;
+        bottom: 70%;
+        left: -6px;
+        width: 13px;
+        height: 13px;
+        background-image: linear-gradient(47deg, #aa00f1 0%, #6722d6 100%);
+        border-radius: 50%;
+    }
+    &:before{
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 70%;
+        width: 100%;
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+.step2__img {
+    margin-left: -15px;
+}
+.step-box3 {
+    justify-content: flex-end;
+    width: 30%;
+    position: relative;
+    &:after{
+        content: " ";
+        position: absolute;
+        z-index: 3;
+        bottom: 55%;
+        left: -6px;
+        width: 13px;
+        height: 13px;
+        background-image: linear-gradient(47deg, #aa00f1 0%, #6722d6 100%);
+        border-radius: 50%;
+    }
+    &:before{
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 55%;
+        width: 100%;
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+.step3__img {
+    margin-left: -15px;
+}
+.step-row2 {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+.row2-box {
+    display: flex;
+    flex-direction: column;
+    padding-top: 73px;
+    padding-bottom: 46px;
+    padding-left: 61px;
+    padding-right: 60px;
+    &:after{
+        content: " ";
+        position: absolute;
+        z-index: 3;
+        bottom: 62%;
+        left: -6px;
+        width: 13px;
+        height: 13px;
+        background-image: linear-gradient(47deg, #aa00f1 0%, #6722d6 100%);
+        border-radius: 50%;
+    }
+    &:before{
+        height: 62%;
+    }
+    
+}
+.row2-imgbox{
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.step-box4 {
+    width: 40%;
+    position: relative;
+    &:before{
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom-left-radius: 20px;
+    }
+}
+.step4__img {
+    margin-left: -10px;
+}
+.step-box5 {
+    width: 30%;
+    position: relative;
+    &:before{
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+.step5__img {
+    margin-left: -10px;
+}
+.step-box6 {
+    width: 30%;
+    position: relative;
+    &:before{
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: calc(100% - 1px);
+        width: 100%;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+}
+.step6__img {
+    margin-left: -10px;
+}
+//! ........ВОЗРАСТНЫЕ ГРУППЫ (БЛОК 6)........
+.agegroup {
+    display: flex;
+}
+.imgbox {
+    display: flex;
+    position: relative;
+    width: 31%;
+    height: 1014px;
+    background-color: #240c46;
+}
+.agegroup__img {
+    position: absolute;
+    bottom: 0;
+    right: -37px;
+    height: 104%;
+}
+.agegroup-content {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 108px;
+    margin-right: calc((100vw - 1490px) / 2);
+    width: 69%;
+}
+.agegroup-title {
+    color: #310f65;
+    font-family: "Bebas Neue Bold";
+    font-size: 72px;
+    text-transform: uppercase;
+}
+.agegroup-box{
+    margin-top: 93px;
+    margin-bottom: 91px;
+    height: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 33px 65px rgba(66, 0, 255, 0.03);
+}
+.agegroup-table { 
+    position: relative;
+    border-collapse: collapse;
+    width: 1023px;
+    &:before{
+        content: " ";
+        position: absolute;
+        top:14px;
+        left:19px;
+        z-index: -1;
+        width: calc(100% - 39px);
+        height: 100%;
+        box-shadow: 0 33px 65px rgba(66, 0, 255, 0.09);
+        border-radius: 10px;
+        border: 1px solid #e8e8e8;
+        background-color: #ffffff;
+        opacity: 0.51;
+    }
+    &:after{
+        content: " ";
+        position: absolute;
+        top:28px;
+        left:31px;
+        width: calc(100% - 62px);
+        height: 100%;
+        z-index: -2;
+        box-shadow: 0 33px 65px rgba(66, 0, 255, 0.09);
+        border-radius: 10px;
+        border: 1px solid #e8e8e8;
+        background-color: #ffffff;
+        opacity: 0.22;
+    }
+    td{
+        color: #310f65;
+        font-family: "Helvetica Neue Cyr - Roman";
+        font-size: 35px;
+        text-align: center;
+        width: 50%;
+
+    }
+    tr{
+        border: none;
+        height: 116px;
+        &:nth-child(1){
+            height: 127px;   
+        }
+        &:nth-child(2n){
+            height: 105px;   
+        }
+        &:nth-child(3){
+            height: 118px;   
+        }
+        &:last-child{
+            height: 125px;
+        }
+    }
+    tr:nth-child(2n){
+        background-color: #fbf8ff;
+    }
+}
+.agegroup-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 346px;
+    height: 89px;
+    box-shadow: 0 20px 95px rgba(162, 0, 255, 0.18);
+    border-radius: 45px;
+    background-color: #81589f;
+    background-image: linear-gradient(24deg, #3000ff 0%, #a800ff 100%);
+    color: #ffffff;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 27px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+//! ........КАТЕГОРИИ ПОБЕДИТЕЛЕЙ (БЛОК 7)........
+.category-inner{
+    padding-top:158px;
+    padding-bottom: 121px;
+}
+.category-title{
+    text-transform: uppercase;
+    color: #310f65;
+    font-family: "Bebas Neue Bold";
+    font-size: 72px;
+}
+.level-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 222px;
+    margin: 0 0 0 107.5px;
+}
+.starbox{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6px;
+}
+.star{
+    width: 43px;
+    height: 41px;
+    object-fit: cover;
+    margin-right: 16px;
+    &:last-child{
+        margin-right: 0; 
+    }
+}
+.pedestal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 33px;
+    margin-bottom: 45px;
+    box-shadow: 0 19px 62px rgba(119, 80, 174, 0.31);
+    border-radius: 10px;
+    border: 3px solid #272e52;
+    background-color: #240c46;
+    background-image: linear-gradient(-143deg, #30105f 0%, #351465 100%);
+}
+.pedestal1{
+    height: 159px;
+}
+.pedestal2{
+    height: 262px;
+}
+.pedestal3{
+    height: 391px;
+}
+.pedestal4{
+    height: 525px;
+}
+.pedestal5{
+    height: 652px;
+}
+.pedestal__text{
+    background-image: linear-gradient(24deg, #630bf5 0%, #a800ff 100%);
+    text-shadow: 0 20px 95px rgba(162, 0, 255, 0.18);
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.text_rotate{
+    background-image: linear-gradient(24deg, #a800ff 0%, #630bf5 100%);
+    writing-mode: tb-rl;
+    transform: rotate(180deg);
+}
+.level-subtitle{
+    text-align: center;
+    position: relative;
+}
+.level-subtitle__text{
+    display: inline-block;
+    position: relative;
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 36px;
+    margin-left: -30px;
+    pointer-events: none;
+    &:before{
+        content: " ";
+        position: absolute;
+        right: -37px;
+        top: 6px;
+        width: 24px;
+        height: 22px;
+        background-image: url("../img/block7/info.png");
+        background-size: cover;
+        pointer-events: all;
+    }
+}
+.level-tooltip{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    top: -10px;
+    left: calc(100% + 50px);
+}
+.level-tooltip__content{
+    display: flex;
+    position: relative;
+    width: 249px;
+    height: auto;
+    padding:10px;
+    align-items: center;
+    box-shadow: 0 14px 43px rgba(91, 13, 203, 0.11);
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 18px;
+    color: #001c43;
+}
+.level-tooltip__arrow{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 17px;
+    left: -5px;
+    background-color: #FFFFFF;
+    transform: rotate(45deg);
+    z-index: 1000;
+    box-shadow: 0 14px 43px rgba(91, 13, 203, 0.11);
+}
+.swipe__img{
+    display: none;
+    object-fit: cover;
+}
+
+//!.......КАТЕГОРИИ ПОТРЕБИТЕЛЕЙ (БЛОК 8).....
+.prizes{
+    background-color: #240c46;
+}
+.prizes-inner{
+    display: block;
+    padding-top: 111px;
+    padding-bottom: 53px;
+}
+.prizes-title {
+    color: #d7bcf9;
+    font-family: "Bebas Neue Bold";
+    font-size: 72px;
+    margin-bottom: 134px;
+}
+.prizes-wrap {
+    display: flex;
+}
+.prizes-col {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    padding-right: 40px;
+    &:first-child{
+        width: 37%;
+    }
+    &:last-child{
+        width: 30%;
+        padding-right: 0;
+    }
+}
+.prize-box {
+    display: flex;
+    margin-bottom:84px;
+    align-items:center;
+}
+div.prize-imgbox {
+    display: flex;
+    align-items: center;
+    position: relative; 
+    width: 190px;
+    height: 185px;
+    color: #b89fd823;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 110px;
+    font-weight: 700;
+}
+div.prize-imgbox1,
+div.prize-imgbox2{
+    margin-right: -30px;
+}
+.prize-img {
+    left: - 70%;
+    top: -70%;
+    position: absolute;
+    object-fit: cover;
+}
+.prize-img1 {
+    left: -85%;
+    top: -65%;
+}
+.prize-img2 {
+    left: -87%;
+    top: -85%;
+}
+.prize-img3 {
+    left: -84%;
+    top: -79%;
+}
+.prize-img4 {
+    left: -87%;
+    top: -69%;
+}
+.prize-img5 {
+    left: -79%;
+    top: -50%;
+}
+.prize-img6 {
+    left: -89%;
+    top: -62%;
+}
+.prize-subtitle {
+    width: calc(100% - 196px);
+    color: #ffffff;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 30px;
+    line-height: 40px;
+}
+//! ........СТОИМОСТЬ УЧАСТИЯ (БЛОК 9)........
+.price-inner {
+    padding-top: 115px;
+    padding-bottom: 78px;
+}
+.price-title {
+    color: #310f65;
+    font-family: "Bebas Neue Bold";
+    font-size: 72px;
+    margin-bottom: 85px;
+}
+.costs-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.cost-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 473px;
+    min-height: 306px;
+    height: 100%;
+    border-radius: 10px;
+    border: 1px solid #e7e7e7;
+    margin-bottom: 34px;
+    &:nth-child(3n-1){
+        width: 534px;
+    }
+}
+.cost-top {
+    display: block;
+    padding-top: 53px;
+    height: 200px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.cost-title {
+    margin-bottom: 25px;
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 24px;
+    font-weight: 700;
+    span{
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+}
+.detail-box {
+    display: flex;
+    align-items: center;  
+}
+.detail-link {
+    color: #7400ff;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 22px;
+    margin-right: 28px;
+}
+.detail-button {
+    width: 35px;
+    height: 35px;
+    box-shadow: 0 5px 16px rgba(105, 0, 255, 0.15);
+    background-color: #ffffff;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 2px 9px;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+.detail-listbox {
+    transition-property: height;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    overflow: hidden;
+    height: 0px;
+}
+.detail-list {
+    li{
+        display: flex;
+        align-items: center;
+        color: #310f65;
+        font-family: "Helvetica Neue Cyr - Roman";
+        font-size: 20px;
+        list-style: none;
+        height: 77px;
+        border-top: 1px solid #e7e7e7;
+        padding-left: 60px;
+    }
+}
+.cost-bottom {
+    display: flex;
+    align-items: center;
+    height: 111px;
+    background-color: #faf7ff;
+    padding-left: 60px;
+}
+.cost-bottom__text {
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 41px;
+    font-weight: 700;
+}
+.ruble {
+    width: 27px;
+    height: 29px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+.download-cost {
+    width: 473px;
+    display: flex;
+    padding-left: 60px;
+}
+.download-cost-box {
+    margin-top: 130px;
+    display: flex;
+}
+.download-cost__img {
+    width: 21px;
+    height: 26px;
+    object-fit: cover;
+    margin-right: 11px;
+}
+.download-cost__text {
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 25px;
+    text-decoration: underline;
+}
+//! ........У ВАС ОСТАЛИСЬ ВОПРОСЫ (БЛОК 10)........
+.questions{
+    background-color: #240c46;
+    overflow: hidden;
+}
+.questions-inner{
+    display: flex;
+    padding-top: 175px;
+    padding-bottom: 166px;
+}
+.questions-content{
+    width: calc(100% - 730px);
+    display: block;
+    padding-left: 83px;
+}
+.questions-imgbox{
+    position: relative;
+    width: 730px;
+}
+.questions-imgbox__img{
+    position: absolute;
+    z-index: 2;
+    left: -17.6%;
+    top: -73%;
+    object-fit: cover;
+    width: 134.6%;
+}
+.questions-title {
+    color: #d7bcf9;
+    font-family: "Bebas Neue Bold";
+    font-size: 72px;
+    margin-bottom: 56px;
+}
+.download-quest {
+    display: flex;
+    margin-bottom: 61px;
+}
+.download-quest__img {
+    width: 60px;
+    object-fit: cover;
+    object-position: -19px -15px;
+}
+.download-quest__text {
+    color: #ffffff;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 28px;
+    line-height: 42px;
+}
+.qustions-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 346px;
+    height: 89px;
+    box-shadow: 0 20px 95px rgba(162, 0, 255, 0.18);
+    border-radius: 45px;
+    background-color: #81589f;
+    background-image: linear-gradient(24deg, #3000ff 0%, #a800ff 100%);
+    color: #ffffff;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 30px;
+    cursor: pointer;
+}
+//! ........ФОТО И ВИДЕО ФЕСТИВАЛЯ(БЛОК 11)........
+.medias {
+    position: relative;
+    padding-bottom: 105px;
+    overflow: hidden;
+}
+.medias-inner {
+    padding-top: 102px;
+    padding-bottom: 190px;
+}
+.medias-title{
+    color: #310f65;
+    font-family: "Bebas Neue Bold";
+    font-size: 72px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.medias-box {
+    position: relative;
+    height: 540px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.medias-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-poster {
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity:1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/block11/videoscreen.jpg');
+    background-size: cover;
+}
+
+.video-is-playing{
+    display: none;
+}
+.video-button {
+    z-index: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 123px;
+    height: 123px;
+    box-shadow: 0 7px 117px #9445ff;
+    background-color: #190779;
+    background-image: linear-gradient(40deg, #3000ff 0%, #a800ff 100%);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.video-button__img {
+    position: relative;
+    width: 26px;
+    height: 29px;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+    &:hover{
+        transform: scale(1.5);
+    }
+}
+//! ........ПАРТНЕРЫ ФЕСТИВАЛЯ(БЛОК 12)........
+.partners-inner {
+    padding-top: 145px;
+    padding-bottom: 90px;
+}
+.partners-title {
+    color: #310f65;
+    font-family: "Bebas Neue Bold";
+    font-size: 79px;
+    text-transform: uppercase;
+    margin-bottom: 114px;
+}
+.partners-slider {
+    position: relative;
+    min-width: 0;
+}
+.partners-box {
+    width: 473px;
+    box-shadow: 0 31px 43px rgba(175, 120, 254, 0.05);
+    border-radius: 10px;
+    border: 1px solid #efefef;
+}
+.partners__subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92px;
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 30px;
+    font-weight: 700;
+    background-color: #fdfbff;
+}
+.partners__img {
+    //height: 326px;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    opacity: 0.3;
+    &:hover{
+        filter: grayscale(0);
+        opacity: 1;
+    }
+}
+.partners-button{
+    z-index: 20;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 54px;
+    top: 2px;
+    width: 346px;
+    height: 89px;
+    border-radius: 45px;
+    background: 
+     linear-gradient(#FFFFFF,#FFFFFF) padding-box,
+     linear-gradient(24deg, #3000ff 0%, #a800ff 100%) border-box;
+    padding:20px;
+    border: 3px solid transparent;
+    color: #42069d;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 26px;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover{
+        color: #ffffff;
+        background: linear-gradient(24deg, #3000ff 0%, #a800ff 100%);
+    }
+}
+//! ........УСПЕЙ ЗАБРОНИРОВАТЬ (БЛОК 13)........
+.booking{
+    background-color: #240c46;
+    position: relative;
+}
+.booking-inner {
+    padding-top: 112px;
+    padding-bottom: 109px;
+}
+.booking-img {
+    position: absolute;
+    bottom: 0px;
+    right: -185px;
+    width: auto;
+    height: 780px;
+    object-fit: cover;
+    z-index: 15;
+}
+.booking-title {
+    width: 700px;
+    color: #ffffff;
+    font-family: "Bebas Neue Bold";
+    font-size: 72px;
+    text-transform: uppercase;
+    line-height: 91px;
+    margin-bottom: 74px;
+    span {
+        color: #d7bcf9;
+        font-family: "Bebas Neue Bold";
+    }
+}
+.booking-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 401px;
+    height: 103px;
+    box-shadow: 0 20px 95px rgba(162, 0, 255, 0.18);
+    border-radius: 52px;
+    background-color: #81589f;
+    background-image: linear-gradient(24deg, #3000ff 0%, #a800ff 100%);
+    color: #ffffff;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+//! ........МЕСТО ПРОВЕДЕНИЯ ФЕСТИВАЛЯ (БЛОК 14)........
+.loc{
+    display: flex;
+}
+.loc-map,
+.ymap-container{
+    width: 992px;
+    height: 656px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background: url('../img/map/map.JPG') #ffffff no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.loc-container{
+    margin-left: 0;
+    margin-right: calc((100vw - 1720px)/2);
+}
+.loc-inner {
+    padding-top: 112px;
+    padding-left: 131px;
+}
+.loc-title {
+    color: #310f65;
+    font-family: "Bebas Neue Bold";
+    font-size: 65px;
+    line-height: 74px;
+    padding-bottom: 88px;
+}
+.loc-content {
+    display: flex;
+    justify-content: space-between;
+}
+.loc-leftbox{
+    padding-right: 70px;
+}
+.loc-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 45px;
+    &:last-child{
+        margin-bottom: 0px;
+    }
+}
+.loc-icon_margin{
+    margin-top: 3px;
+}
+.loc-place__img {
+    width: 24px;
+    height: 100%;
+    object-fit: contain;
+}
+.loc-place__href {
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 30px;
+    line-height: 39px;
+    margin-left: 36px;
+}
+.loc-phone__img {
+    width: 24px;
+    height: 26px;
+    object-fit: contain;
+}
+.loc-phone__text {
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 36px;
+}
+.loc-mail__img {
+    width: 24px;
+    height: 26px;
+    object-fit: contain;
+}
+.loc-mail__href {
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 30px;
+    margin-left: 36px;
+}
+.loc-rightbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    width: auto;
+    a{
+        filter:grayscale(100%);
+        &:hover{
+            filter:grayscale(0);
+        }
+    }
+}
+// карта
+  /* Блок, в котором появится Яндекс.Карта */
+#map-yandex {
+    position: relative;
+    z-index: 7;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+//! .......ФУТЕР........
+footer{
+    height: 321px;
+}
+.footer-inner {
+    padding-top: 75px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-logo {
+    width: 125px;
+    height: 119px;
+    margin-right: 49px;
+}
+.footer-leftbox{
+    display: flex;
+}   
+.footer-title {
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 24px;
+    margin-bottom: 31px;
+}
+.footer-table {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-auto-rows: auto;
+    row-gap: 25px;
+    column-gap: 37px;
+}
+.footer-box {
+    color: #ababab;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 22px;
+}
+#privacy{
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover{
+        color: #310f65;
+    }
+}
+.footer-button {
+    align-self: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 54px;
+    top: 2px;
+    width: 346px;
+    height: 89px;
+    border-radius: 45px;
+    background: 
+        linear-gradient(#FFFFFF,#FFFFFF) padding-box,
+        linear-gradient(24deg, #3000ff 0%, #a800ff 100%) border-box;
+    padding:20px;
+    border: 3px solid transparent;
+    color: #42069d;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 26px;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover{
+        color: #ffffff;
+        background: linear-gradient(24deg, #3000ff 0%, #a800ff 100%);
+    }
+}
+
+//! .......СПАСИБО (скрытый)........
+.popup{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #210745ce;
+    z-index: 9999;
+    opacity: 0;
+}
+.popup-box{
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: height  0.6s ease, width 0.6s ease;
+}
+.popup-thanks{
+    width: 706px;
+    height: 808px;
+    text-align: center;
+}
+.popup-sendcontact{
+    width: 1105px;
+    height: 515px;
+    padding: 138px 136px 86px;
+}
+.thanks-box{
+    display: none;
+}
+.sendcontact-inner{
+    display: none;
+}
+
+.thanks__checkbox {
+    position: relative;
+    width: 315px;
+    height: 315px;
+    margin: 152px auto 70px;
+    box-shadow: 1px 14px 40px rgba(195, 195, 195, 0.2);
+    border-radius: 10px;
+    background-color: #ffffff;
+    &:after{
+        content: "";
+        position: absolute;
+        width: 567px;
+        height: 386px;
+        top: -74px;
+        left: -93px;
+        background-image: url("../img/thanks/check.png");
+        background-size: cover;
+    }
+}
+.thanks__row1 {
+    margin: 0px auto 8px;
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 26px;
+}
+.thanks__row2 {
+    margin: 0px auto 27px;
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 48px;
+    font-weight: 1000;
+    letter-spacing: 2px;
+}
+.thanks__row3 {
+    color: #8374b5;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 23px;
+    line-height: 32.85px;
+    width: 437px;
+    margin:0 auto;
+}
+//! .......ОСТАВИТЬ НОМЕР (скрытый)........
+.sendcontact__title {
+    text-align: center;
+    color: #310f65;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 39px;
+    line-height: 55px;
+    margin-bottom: 64px;
+    span{
+        font-weight: 700;
+    }
+}
+.thanks__agree{
+    color: #c9c9c9;
+    font-family: "Helvetica Neue Cyr - Roman";
+    font-size: 18px;
+    text-align: center;
+    span{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+.sendcontact-form  {
+    display: flex;
+    position: relative;
+    margin-bottom: 28px;
+    width: 805px;
+    height: 91px;
+    border-radius: 45px;
+    border: 1px solid #a686f7;
+}
+.sendcontact-phone {
+    border-radius: 45px;
+    padding-left: 67px;
+    width: 100%;
+    color: #5e1bae;
+    font-size: 25px;
+    font-family: "Helvetica Neue Cyr - Roman";
+    &::placeholder{
+        color: #5e1bae;
+        font-size: 25px;
+    }
+}
+.sendcontact-button {
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    border-radius: 45px;
+    width: 346px;
+    height: 89px;
+    box-shadow: 0 20px 95px rgba(162, 0, 255, 0.18);
+    background-color: #81589f;
+    background-image: linear-gradient(24deg, #3000ff 0%, #a800ff 100%);
+    font-size: 27px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "Helvetica Neue Cyr - Roman";
+}
+@import 'animate.scss';
+@import 'fonts.scss';
+@import 'slider.scss';
+@import 'media.scss';
